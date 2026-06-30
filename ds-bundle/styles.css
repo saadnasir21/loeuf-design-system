@@ -1,0 +1,77 @@
+/* ============================================================
+   loeuf — Claude Design system stylesheet (source of truth)
+   Every rendered design receives this file's @import closure:
+   fonts + tokens + base + component classes.
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Montserrat:wght@300;400;500;600&display=swap");
+
+:root{
+  /* neutrals */
+  --c-noir:#161616; --c-charcoal:#2E2E2E; --c-graphite:#555; --c-stone:#8A8A8A;
+  --c-silver:#C4C4C4; --c-mist:#EAEAEA; --c-cloud:#F1F0EE; --c-blanc:#FAF9F6; --c-white:#FFF;
+  /* accents */
+  --c-rose:#C97F75; --c-rose-deep:#B0685E; --c-rose-soft:#E7C4BD;
+  --c-almond:#E7DECF; --c-yolk:#DDA63A;
+  /* semantic */
+  --c-success:#4F7A5B; --c-error:#A93B2E; --c-sale:#C97F75;
+  /* roles */
+  --bg-page:var(--c-mist); --bg-surface:var(--c-white); --bg-muted:var(--c-cloud);
+  --text-primary:var(--c-noir); --text-secondary:var(--c-graphite); --text-muted:var(--c-stone);
+  --border-subtle:#E2E1DE; --border-strong:var(--c-silver);
+  /* type */
+  --font-display:"Fraunces",Georgia,serif;
+  --font-sans:"Gotham","Montserrat","Helvetica Neue",Arial,sans-serif;
+  /* spacing (4px base) */
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px;
+  /* radius / motif */
+  --radius-none:0; --radius-sm:2px; --radius-md:4px; --radius-lg:8px; --radius-pill:999px;
+  --egg:50% 50% 50% 50% / 62% 62% 38% 38%; /* the œuf shape */
+  /* elevation */
+  --shadow-sm:0 1px 2px rgba(22,22,22,.05);
+  --shadow-md:0 6px 20px rgba(22,22,22,.08);
+  --shadow-lg:0 18px 48px rgba(22,22,22,.12);
+}
+
+*{box-sizing:border-box}
+body{margin:0; font-family:var(--font-sans); color:var(--text-primary); background:var(--bg-page); line-height:1.6; -webkit-font-smoothing:antialiased}
+
+/* type */
+.ds-eyebrow{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); font-weight:500}
+.ds-display{font-family:var(--font-display); font-weight:300; letter-spacing:-.03em; line-height:1}
+h1,h2,h3,h4,.ds-heading{font-family:var(--font-display); font-weight:400; letter-spacing:-.01em; line-height:1.1}
+
+/* wordmark (egg replaces the o) */
+.ds-wordmark{font-family:var(--font-sans); font-weight:500; letter-spacing:.3em; text-transform:lowercase; display:inline-flex; align-items:center; gap:1px}
+.ds-wordmark .o{width:.55em; height:.7em; border:2px solid var(--c-rose); border-radius:var(--egg); display:inline-block}
+
+/* surfaces */
+.ds-card{background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md)}
+
+/* buttons */
+.ds-btn{font-family:var(--font-sans); font-size:13px; letter-spacing:.12em; text-transform:uppercase; font-weight:500;
+  padding:14px 30px; border:1px solid var(--c-noir); background:var(--c-noir); color:var(--c-blanc);
+  border-radius:var(--radius-none); cursor:pointer; transition:all .22s cubic-bezier(.2,.8,.2,1)}
+.ds-btn:hover{background:transparent; color:var(--c-noir)}
+.ds-btn--ghost{background:transparent; color:var(--c-noir)}
+.ds-btn--ghost:hover{background:var(--c-noir); color:var(--c-blanc)}
+.ds-btn--accent{background:var(--c-rose); border-color:var(--c-rose); color:#fff}
+.ds-btn--accent:hover{background:var(--c-rose-deep); border-color:var(--c-rose-deep)}
+.ds-btn--link{background:none; border:0; padding:0 0 3px; border-bottom:1px solid var(--c-noir); color:var(--c-noir); letter-spacing:.06em}
+.ds-btn:disabled{background:var(--c-mist); border-color:var(--c-mist); color:var(--c-stone); cursor:not-allowed}
+
+/* badges (Rose accent) */
+.ds-badge{display:inline-block; font-size:10px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; padding:5px 11px; border-radius:var(--radius-sm); background:var(--c-rose); color:#fff}
+.ds-badge--noir{background:var(--c-noir); color:var(--c-blanc)}
+.ds-badge--soft{background:var(--c-mist); color:var(--c-charcoal)}
+.ds-badge--out{background:transparent; color:var(--c-rose); border:1px solid var(--c-rose)}
+.ds-badge--stock{background:transparent; color:var(--c-success); border:1px solid var(--c-success)}
+
+/* inputs */
+.ds-input{width:100%; font-family:var(--font-sans); font-size:15px; padding:12px 14px; border:1px solid var(--c-silver);
+  border-radius:var(--radius-sm); background:var(--c-white); color:var(--c-noir)}
+.ds-input::placeholder{color:var(--c-stone)}
+.ds-input:focus{outline:none; border-color:var(--c-noir); box-shadow:0 0 0 3px rgba(22,22,22,.06)}
+
+/* egg crop utility */
+.ds-egg{border-radius:var(--egg); overflow:hidden}

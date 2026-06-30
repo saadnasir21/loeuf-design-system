@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" name="Buttons" subtitle="Primary · ghost · accent · link · disabled" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--mist:#EAEAEA;--noir:#161616;--blanc:#FAF9F6;--stone:#8A8A8A;--rose:#C97F75;--rose-deep:#B0685E;--sans:"Gotham","Montserrat",Arial,sans-serif;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0}body{font-family:var(--sans);background:var(--mist);color:var(--noir);padding:28px}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:18px}
+.card{background:#fff;border:1px solid #E2E1DE;border-radius:5px;padding:30px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn{font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:14px 28px;border:1px solid var(--noir);background:var(--noir);color:var(--blanc);border-radius:0;cursor:pointer;transition:all .22s var(--ease)}
+.btn:hover{background:transparent;color:var(--noir)}
+.ghost{background:transparent;color:var(--noir)}.ghost:hover{background:var(--noir);color:var(--blanc)}
+.accent{background:var(--rose);border-color:var(--rose);color:#fff}.accent:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+.link{background:none;border:0;padding:0 0 3px;border-bottom:1px solid var(--noir);color:var(--noir);letter-spacing:.06em}
+.dis{background:var(--mist);border-color:var(--mist);color:var(--stone);cursor:not-allowed}
+</style></head><body>
+<div class="eyebrow">Components · Buttons</div>
+<div class="card">
+  <button class="btn">Add to cart</button>
+  <button class="btn ghost">Shop the look</button>
+  <button class="btn accent">Apply SUMMER15</button>
+  <button class="btn link">View details</button>
+  <button class="btn dis" disabled>Sold out</button>
+</div>
+</body></html>

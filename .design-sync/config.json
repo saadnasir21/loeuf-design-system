@@ -1,0 +1,7 @@
+{
+  "shape": "static-html",
+  "localDir": "./ds-bundle",
+  "readmeHeader": "./ds-bundle/README.md",
+  "projectId": null,
+  "notes": "Hand-authored (off-script) static design-system cards for loeuf. Not a buildable component repo — no dist/, no React bundle. Upload ds-bundle/ directly via the DesignSync tool from a claude.ai-authorized session (this env cannot run /design-login). See .design-sync/NOTES.md for the push sequence."
+}

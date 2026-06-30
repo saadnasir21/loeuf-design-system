@@ -1,0 +1,45 @@
+<!-- @dsCard group="Foundations" name="Spacing & radius" subtitle="4px base · near-sharp corners" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--mist:#EAEAEA;--stone:#8A8A8A;--charcoal:#2E2E2E;--sans:"Gotham","Montserrat",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--sans);background:var(--mist);color:#161616;padding:28px}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:18px}
+.wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:14px}
+.card{background:#fff;border:1px solid #E2E1DE;border-radius:5px;padding:22px}
+.row{display:flex;align-items:center;gap:14px;padding:7px 0}
+.row code{font-size:12px;color:var(--charcoal);width:74px}.bar{height:14px;background:var(--charcoal);border-radius:2px}
+.h{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:14px}
+.rad{display:flex;gap:14px;align-items:flex-end}
+.rad div{text-align:center}.rad .b{width:52px;height:40px;background:var(--mist);margin-bottom:6px}.rad small{font-size:10px;color:var(--stone)}
+</style></head><body>
+<div class="eyebrow">Foundations · Spacing &amp; radius</div>
+<div class="wrap">
+  <div class="card">
+    <div class="h">Spacing — 4px base</div>
+    <div class="row"><code>space-1</code><span class="bar" style="width:4px"></span><small style="color:#8A8A8A">4</small></div>
+    <div class="row"><code>space-2</code><span class="bar" style="width:8px"></span><small style="color:#8A8A8A">8</small></div>
+    <div class="row"><code>space-3</code><span class="bar" style="width:12px"></span><small style="color:#8A8A8A">12</small></div>
+    <div class="row"><code>space-4</code><span class="bar" style="width:16px"></span><small style="color:#8A8A8A">16</small></div>
+    <div class="row"><code>space-5</code><span class="bar" style="width:24px"></span><small style="color:#8A8A8A">24</small></div>
+    <div class="row"><code>space-6</code><span class="bar" style="width:32px"></span><small style="color:#8A8A8A">32</small></div>
+    <div class="row"><code>space-7</code><span class="bar" style="width:48px"></span><small style="color:#8A8A8A">48</small></div>
+    <div class="row"><code>space-8</code><span class="bar" style="width:64px"></span><small style="color:#8A8A8A">64</small></div>
+  </div>
+  <div class="card">
+    <div class="h">Radius — near-sharp</div>
+    <div class="rad">
+      <div><div class="b" style="border-radius:0"></div><small>0 · default</small></div>
+      <div><div class="b" style="border-radius:2px"></div><small>2 · sm</small></div>
+      <div><div class="b" style="border-radius:4px"></div><small>4 · md</small></div>
+      <div><div class="b" style="border-radius:999px"></div><small>pill</small></div>
+    </div>
+    <div class="h" style="margin-top:26px">Elevation — whisper-soft</div>
+    <div style="display:flex;gap:18px">
+      <div style="width:56px;height:42px;background:#fff;border-radius:4px;box-shadow:0 1px 2px rgba(22,22,22,.05)"></div>
+      <div style="width:56px;height:42px;background:#fff;border-radius:4px;box-shadow:0 6px 20px rgba(22,22,22,.08)"></div>
+      <div style="width:56px;height:42px;background:#fff;border-radius:4px;box-shadow:0 18px 48px rgba(22,22,22,.12)"></div>
+    </div>
+  </div>
+</div>
+</body></html>
