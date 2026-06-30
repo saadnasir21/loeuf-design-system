@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>loeuf — Instagram Highlight Covers</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --mist:#EAEAEA; --blanc:#FAF9F6; --white:#FFF; --noir:#161616;
+    --rose:#C97F75; --almond:#E7DECF; --silver:#C4C4C4;
+    --serif:"Fraunces",Georgia,serif; --sans:"Gotham","Montserrat",Arial,sans-serif;
+    --egg:50% 50% 50% 50% / 62% 62% 38% 38%;
+  }
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--sans)}
+  /* each cover is a 1080x1080 Canva page */
+  .cover{
+    width:1080px; height:1080px; display:flex; align-items:center; justify-content:center;
+    position:relative; overflow:hidden;
+  }
+  .glyph{font-family:var(--serif); font-weight:300; color:var(--noir); line-height:1}
+  .glyph.italic{font-style:italic}
+  .ring{ /* faint safe-circle for centering reference; subtle, on-brand */
+    position:absolute; width:760px; height:760px; border-radius:50%;
+    border:2px solid rgba(22,22,22,0.07);
+  }
+  /* egg-outline motif */
+  .egg{width:300px; height:380px; border:16px solid var(--noir); border-radius:var(--egg)}
+  .wm{font-family:var(--sans); font-weight:500; letter-spacing:.30em; text-transform:lowercase;
+      font-size:120px; display:inline-flex; align-items:center; gap:4px}
+  .wm .o{width:54px; height:70px; border:10px solid var(--rose); border-radius:var(--egg); display:inline-block}
+</style>
+</head>
+<body>
+
+  <!-- 1 · Brand / motif -->
+  <div class="cover" data-document-role="page" data-label="loeuf" style="background:var(--blanc)">
+    <span class="wm">l<span class="o"></span>euf</span>
+  </div>
+
+  <!-- 2 · New in (egg outline) -->
+  <div class="cover" data-document-role="page" data-label="New in" style="background:var(--mist)">
+    <div class="ring"></div>
+    <div class="egg"></div>
+  </div>
+
+  <!-- 3 · Shop -->
+  <div class="cover" data-document-role="page" data-label="Shop" style="background:var(--mist)">
+    <div class="ring"></div>
+    <span class="glyph italic" style="font-size:440px">S</span>
+  </div>
+
+  <!-- 4 · Lookbook -->
+  <div class="cover" data-document-role="page" data-label="Lookbook" style="background:var(--almond)">
+    <div class="ring"></div>
+    <span class="glyph italic" style="font-size:440px">L</span>
+  </div>
+
+  <!-- 5 · Details -->
+  <div class="cover" data-document-role="page" data-label="Details" style="background:var(--mist)">
+    <div class="ring"></div>
+    <span class="glyph italic" style="font-size:440px">D</span>
+  </div>
+
+  <!-- 6 · Sale (Rose) -->
+  <div class="cover" data-document-role="page" data-label="Sale" style="background:var(--rose)">
+    <div class="ring" style="border-color:rgba(255,255,255,0.22)"></div>
+    <span class="glyph" style="font-size:420px; color:#fff; font-weight:300">%</span>
+  </div>
+
+  <!-- 7 · F.A.Q -->
+  <div class="cover" data-document-role="page" data-label="FAQ" style="background:var(--mist)">
+    <div class="ring"></div>
+    <span class="glyph italic" style="font-size:440px">?</span>
+  </div>
+
+  <!-- 8 · Loved -->
+  <div class="cover" data-document-role="page" data-label="Loved" style="background:var(--mist)">
+    <div class="ring"></div>
+    <span class="glyph" style="font-size:380px; color:var(--rose)">&#9733;</span>
+  </div>
+
+</body>
+</html>
