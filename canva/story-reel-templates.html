@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>loeuf — Story & Reel Templates (9:16)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --mist:#EAEAEA; --cloud:#F1F0EE; --almond:#E7DECF; --blanc:#FAF9F6; --white:#FFF;
+    --noir:#161616; --graphite:#555; --stone:#8A8A8A; --silver:#C4C4C4;
+    --rose:#C97F75; --rose-deep:#B0685E;
+    --serif:"Fraunces",Georgia,serif; --sans:"Gotham","Montserrat",Arial,sans-serif;
+  }
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--sans)}
+  .page{width:1080px;height:1920px;position:relative;overflow:hidden;background:var(--mist)}
+  .wm{font-family:var(--sans);font-weight:500;letter-spacing:.30em;text-transform:lowercase;font-size:40px}
+  .kicker{font-size:26px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone)}
+  .headline{font-family:var(--serif);font-weight:300;line-height:1.03;letter-spacing:-.01em}
+  .badge{font-family:var(--sans);font-size:26px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+         padding:14px 30px;border-radius:4px;background:var(--rose);color:#fff}
+  .photo{background:var(--cloud);border-radius:10px;display:flex;align-items:center;justify-content:center;
+         font-family:var(--serif);font-style:italic;color:var(--silver);font-size:34px}
+  .pill{font-size:26px;letter-spacing:.2em;text-transform:uppercase;padding:22px 48px;border:2px solid var(--noir);border-radius:999px;color:var(--noir)}
+  .dark .wm,.dark .headline,.dark .kicker{color:var(--blanc)} .dark .pill{border-color:#fff;color:#fff}
+  /* content zones inside safe area */
+  .body{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:34px;padding:0 90px}
+  .head-slot{position:absolute;top:150px;left:0;right:0;display:flex;justify-content:center}
+  .foot-slot{position:absolute;bottom:200px;left:0;right:0;display:flex;justify-content:center}
+  /* story safe-zone guides (top/bottom ~16%) */
+  .safe{position:absolute;left:0;right:0;height:16%;
+        background:repeating-linear-gradient(45deg,rgba(201,127,117,.12),rgba(201,127,117,.12) 14px,transparent 14px,transparent 28px)}
+  .safe.t{top:0} .safe.b{bottom:0}
+  .safe span{position:absolute;left:0;right:0;text-align:center;top:50%;transform:translateY(-50%);
+             font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-deep)}
+  /* reel cover lower-third */
+  .reelbar{position:absolute;left:0;right:0;bottom:0;height:520px;
+           background:linear-gradient(transparent,rgba(0,0,0,.58));display:flex;flex-direction:column;justify-content:flex-end;padding:80px}
+  .reelbar .rk{font-size:24px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+  .reelbar .rt{font-family:var(--serif);font-weight:300;font-size:78px;color:#fff;line-height:1.02;margin-top:16px}
+  .play{position:absolute;top:150px;right:80px;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.85);
+        display:flex;align-items:center;justify-content:center;color:var(--noir);font-size:30px}
+</style>
+</head>
+<body>
+
+  <!-- PAGE 1 · Reel cover — Styling -->
+  <div class="page" data-document-role="page" data-label="Reel cover · Styling" style="background:var(--mist)">
+    <div class="play">&#9654;</div>
+    <div class="head-slot"><span class="wm">loeuf</span></div>
+    <div class="reelbar"><div class="rk">Episode 01 · styling</div><div class="rt">3 ways to wear Camila</div></div>
+  </div>
+
+  <!-- PAGE 2 · Reel cover — Behind the seams -->
+  <div class="page" data-document-role="page" data-label="Reel cover · Process" style="background:var(--almond)">
+    <div class="play">&#9654;</div>
+    <div class="head-slot"><span class="wm">loeuf</span></div>
+    <div class="reelbar"><div class="rk">In the studio</div><div class="rt">Behind the seams</div></div>
+  </div>
+
+  <!-- PAGE 3 · Reel cover — The drop -->
+  <div class="page" data-document-role="page" data-label="Reel cover · Drop" style="background:var(--noir)">
+    <div class="play">&#9654;</div>
+    <div class="head-slot"><span class="wm" style="color:var(--blanc)">loeuf</span></div>
+    <div class="reelbar"><div class="rk">New in · summer</div><div class="rt">The drop, in motion</div></div>
+  </div>
+
+  <!-- PAGE 4 · Story — Product drop -->
+  <div class="page" data-document-role="page" data-label="Story · Product drop" style="background:var(--mist)">
+    <div class="safe t"><span>avatar / name zone</span></div>
+    <div class="head-slot"><span class="wm">loeuf</span></div>
+    <div class="body">
+      <span class="badge">Just dropped</span>
+      <div class="photo" style="width:560px;height:720px">— product —</div>
+      <div class="headline" style="font-size:80px">Salla</div>
+    </div>
+    <div class="foot-slot"><span class="pill">Tap to shop</span></div>
+    <div class="safe b"><span>reply / link zone</span></div>
+  </div>
+
+  <!-- PAGE 5 · Story — Sale countdown -->
+  <div class="page dark" data-document-role="page" data-label="Story · Sale countdown" style="background:var(--rose)">
+    <div class="safe t"></div>
+    <div class="head-slot"><span class="wm">loeuf</span></div>
+    <div class="body">
+      <div class="kicker" style="color:rgba(255,255,255,.85)">Summer event</div>
+      <div class="headline" style="font-size:210px;color:#fff">−15%</div>
+      <div style="font-size:40px;color:#fff;letter-spacing:.06em">&#9201; ends in 06 : 12 : 44</div>
+    </div>
+    <div class="foot-slot"><span class="pill">SUMMER15</span></div>
+    <div class="safe b"><span style="color:#fff">add Countdown sticker</span></div>
+  </div>
+
+  <!-- PAGE 6 · Story — Quote -->
+  <div class="page dark" data-document-role="page" data-label="Story · Quote" style="background:var(--noir)">
+    <div class="safe t"></div>
+    <div class="head-slot"><span class="wm" style="color:var(--blanc)">loeuf</span></div>
+    <div class="body">
+      <div class="headline" style="font-size:104px;color:var(--blanc)">“Crafted for<br>the way you<br><em style="font-style:italic">move.</em>”</div>
+    </div>
+    <div class="foot-slot"><span class="kicker">@loeuf.pk</span></div>
+    <div class="safe b"></div>
+  </div>
+
+</body>
+</html>
